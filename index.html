@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>HOME</title>
+	<link href="https://fonts.googleapis.com/css?family=Black+Han+Sans" rel="stylesheet">
+
+	<style>
+		.listBox{background: white;
+			margin-right: 20px;
+			position: fixed;
+			}
+
+		.red{
+			margin-left: 260px;}
+
+		.rect{width:1110px; float:left;}
+		.square{width:240px;float:left;}
+		
+
+		.clear{clear:both;}
+
+		.list {list-style-type:none;
+				margin: 10px;
+				font-family: Helvetica;
+				font-size: 15px;
+				font-weight: 700;
+				line-height: 22px;
+				}
+
+		a:visited {
+		    color: black;
+		    background-color: transparent;
+		    text-decoration: none;
+		}
+
+		a:link {
+		    color: black;
+		    background-color: transparent;
+		    text-decoration: none;
+		}
+
+		a:hover {color: blue;}
+
+		.dropdown:hover .dropdown-content {
+		    display: block;
+		}
+
+		.dropdown-content a:hover {color: blue;}
+		
+		.dropdown-content a {
+		    color: black;
+		    padding: 12px 16px;
+		    text-decoration: none;
+		    display: block;
+		}
+
+		a:active {
+		    color: white;
+		    background-color: transparent;
+		    text-decoration: none;
+		}
+
+		#container {font-size: 110px;
+					font-family: 'Black Han Sans', sans-serif;
+					line-height: 120px;
+					}
+		@keyframes rotate{
+			from{transform: rotate(0deg)}
+			to{transform: rotate(360deg)}
+		}
+
+		.footer {
+		   height: 70px; 
+		   left: 0;
+		   bottom: 0;
+		   width: 100%;
+
+		   text-align: right;
+		}
+
+		.p1 {
+		   font-family: Helvetica;
+		   font-weight: 500;
+		   margin-right: 10px;
+		}
+
+		.dropbtn {
+			list-style-type:none;
+			font-family: Helvetica;
+			font-size: 15px;
+			font-weight: 700;
+			line-height: 22px;
+		    color: black;
+		    border: none;
+		    cursor: pointer;
+		    padding: 0px;
+		}
+
+		.dropdown {
+		    position: relative;
+		    display: inline-block;
+		}
+
+		.dropdown-content {
+		    display: none;
+		    position: relative;
+		    background-color: #f9f9f9;
+		    min-width: 160px;
+		    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+		    z-index: 1;
+		    margin-bottom: 10px;
+		}
+
+		#LD {
+			width: 300px;
+
+		}
+
+		#angry {
+			width: 300px;
+			float: right;
+			margin-right: 200px;
+		}
+
+	</style>
+</head>
+<body>
+		<div class="listBox square">
+			<div class="list">
+			  <li><a href="https://kim50.github.io/kim50_home/">HOME</a></li>
+			  <li><a href="#home">ABOUT ME</a></li>
+			
+			   <div class="dropdown">
+
+				    <button class="dropbtn"><a href="https://kim50.github.io/kim50_home/">CODING</a> 
+				      <i class="fa fa-caret-down"></i>
+				    </button>
+				    <div class="dropdown-content">
+				      <a href="https://kim50.github.io/line-dancing/">#1. Line Dancing</a>
+				      <a href="https://kim50.github.io/angry_chihuahua/">#2. ANGRY Chihuahua</a>
+				      <a href="#">Link 3</a>
+				    </div>
+				  </div> 
+
+			  <li><a href="#home">POSTER</a></li>
+			</div>  
+		</div>
+		<div class="red rect">
+			<div id="monitor"></div>
+			<div id="container">
+		안녕하세요.<br>
+		이 곳은 김수인의 그래픽 실험실입니다.<br>
+		<a href="https://kim50.github.io/line-dancing/"><img src="line.gif" id="LD"></a>
+		Hello.<br>
+		This is Kim Soo-in's graphic lab.<br>
+		<a href="https://kim50.github.io/angry_chihuahua/"><img src="angry.gif" id="angry"></a><br>
+		こんにちは。<br>
+		ここに私のグラフィックラボです。<br><br>
+		Bonjour.<br>
+		Ceci est mon laboratoire graphique.<br>
+			</div>
+		</div>
+		<div class="clear"></div>
+	</section>
+
+	<div class="footer">
+		  <p class="p1">
+		  	Kim Su-In<br>
+		  	tndlstnals@gmail.com<br>
+		  	south korea, seoul<br>
+		  	<a href="https://www.behance.net/tndlstnals0b6e">https://www.behance.net/tndlstnals0b6e</a>
+		  </p>
+	</div>
+
+<script type="text/javascript">
+	window.onscroll = function(){
+		var t = document.documentElement.scrollTop;
+
+		if(t < 100){
+			container.style.background = "white";
+		}else if(t < 100){
+			container.style.background = "orange";
+		}else if(t < 200){
+			container.style.background = "yellow";
+		}else if(t < 300){
+			container.style.background = "green";
+		}else if(t < 400){
+			container.style.background = "blue";
+		}else if(t < 500){
+			container.style.background = "navy";
+		}else{
+			container.style.background = "purple";
+		}
+
+		if(t > 2240 && t < 2800){ 
+			bloom.style.animationPlayState = "running";
+		}else{
+			bloom.style.animationPlayState = "paused";
+		}
+	}
+
+	//자동스크롤
+	var s = 0;
+	//setInterval(count,100);
+	function count(){
+		s = s + 1;
+		//s합이 30이넘어야 3초가 지난것
+		if(s > 30){
+			var t = document.documentElement.scrollTop;
+			t = t + 10;
+			document.documentElement.scrollTop = t;	
+		}
+		
+	}
+
+	document.body.onmousemove = function(){
+		s = 0; //마우스 반
+	}
+
+	//스크롤 예제
+	//https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_svg_scrolldrawing
+
+
+	</script>
+
+
+</body>
+</html>
